@@ -1,0 +1,11 @@
+com\muzammilnagariya\msasecondclient\config\BootStrap.class
+client\MyClient.class
+com\muzammilnagariya\msasecondclient\service\ExampleService.class
+Entity\Users.class
+servlet\RestServlet.class
+com\muzammilnagariya\msasecondclient\config\CrossOriginResourceSharingFilter.class
+com\muzammilnagariya\msasecondclient\config\Producers.class
+Entity\Subscription.class
+Entity\Customer.class
+com\muzammilnagariya\msasecondclient\service\HealthCheckService.class
+Entity\Address.class

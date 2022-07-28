@@ -1,0 +1,21 @@
+#!/bin/sh
+#deploy="false"
+deploy="true"
+
+image=MSASecondClient
+version=1.0-SNAPSHOT
+latest=true
+
+#OPTIONS="--no-cache --force-rm"
+#OPTIONS="--no-cache"
+#OPTIONS="--force-rm"
+OPTIONS=""
+
+docker build ${OPTIONS} -t muzammilnagariya/${image}:1.0-SNAPSHOT .
+if [ "$?" -eq 0 ] && [ ${deploy} == "true" ]; then
+    docker push muzammilnagariya/${image}:1.0-SNAPSHOT
+    if [ "$latest" == "true" ]; then
+        docker tag muzammilnagariya/${image}:1.0-SNAPSHOT muzammilnagariya/${image}:latest
+        docker push muzammilnagariya/${image}:latest
+    fi
+fi
